@@ -1,0 +1,13 @@
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\bin\Debug\netcoreapp3.1\Battleship-console-game.exe
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\bin\Debug\netcoreapp3.1\Battleship-console-game.deps.json
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\bin\Debug\netcoreapp3.1\Battleship-console-game.runtimeconfig.json
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\bin\Debug\netcoreapp3.1\Battleship-console-game.runtimeconfig.dev.json
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\bin\Debug\netcoreapp3.1\Battleship-console-game.dll
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\bin\Debug\netcoreapp3.1\Battleship-console-game.pdb
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\obj\Debug\netcoreapp3.1\Battleship-console-game.csprojAssemblyReference.cache
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\obj\Debug\netcoreapp3.1\Battleship-console-game.AssemblyInfoInputs.cache
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\obj\Debug\netcoreapp3.1\Battleship-console-game.AssemblyInfo.cs
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\obj\Debug\netcoreapp3.1\Battleship-console-game.csproj.CoreCompileInputs.cache
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\obj\Debug\netcoreapp3.1\Battleship-console-game.dll
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\obj\Debug\netcoreapp3.1\Battleship-console-game.pdb
+C:\Prywatne\Projekty GitHub\Battleship-console-game-\Battleship-console-game\Battleship-console-game\obj\Debug\netcoreapp3.1\Battleship-console-game.genruntimeconfig.cache
