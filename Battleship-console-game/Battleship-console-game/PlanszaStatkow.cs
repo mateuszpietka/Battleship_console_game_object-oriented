@@ -12,6 +12,7 @@ namespace Statki
 
         public PlanszaStatkow()
         {
+            if (instancje == 2) { instancje = 0; }
             instancje++;
         }
 
@@ -19,42 +20,42 @@ namespace Statki
         {
             for (int i = 0; i < statki.Count; i++)
             {
-                int x, y, orientacja;
-                bool warunek = false;
-                int wielkosc = statki[i].Wielkosc;
+                int pozycjaX, pozycjaY, orientacja;
+                bool warunekUstawienia = false;
+                int rozmiar = statki[i].Rozmiar;
 
-                while (warunek == false)
+                while (warunekUstawienia == false)
                 {
-                    Console.WriteLine($"Rozmieść statki na planszy dla GRACZ{instancje}.\nPodaj współrzędne statku {wielkosc} masztowego. ");
+                    Console.WriteLine($"Rozmieść statki na planszy dla GRACZ{instancje}.\nPodaj współrzędne statku {rozmiar} masztowego. ");
                     Console.WriteLine("Współrzędna y: ");
-                    Int32.TryParse(Console.ReadLine(), out x);
+                    Int32.TryParse(Console.ReadLine(), out pozycjaX);
                     Console.WriteLine("Współrzędna x: ");
-                    Int32.TryParse(Console.ReadLine(), out y);
+                    Int32.TryParse(Console.ReadLine(), out pozycjaY);
                     Console.WriteLine("Podaj orientacje (0-poziomo/1-pionowo): ");
                     Int32.TryParse(Console.ReadLine(), out orientacja);
 
-                    statki[i].X = x;
-                    statki[i].Y = y;
+                    statki[i].X = pozycjaX;
+                    statki[i].Y = pozycjaY;
                     statki[i].Orientacja = orientacja;
-                    if (orientacja == 0 && (wielkosc + y) <= 11 && ((x != 0) && (y != 0)))
+                    if (orientacja == 0 && (rozmiar + pozycjaY) <= 11 && ((pozycjaX != 0) && (pozycjaY != 0)))
                     {
                         statki[i].UstawienieZyc();
-                        polaPlanszy[x, y] = "S";
-                        for (int j = 0; j < wielkosc; j++)
+                        polaPlanszy[pozycjaX, pozycjaY] = "S";
+                        for (int j = 0; j < rozmiar; j++)
                         {
-                            polaPlanszy[x, y + j] = "S";
+                            polaPlanszy[pozycjaX, pozycjaY + j] = "S";
                         }
-                        warunek = true;
+                        warunekUstawienia = true;
                     }
-                    else if (orientacja == 1 && (wielkosc + x) <= 11 && ((x != 0) && (y != 0)))
+                    else if (orientacja == 1 && (rozmiar + pozycjaX) <= 11 && ((pozycjaY != 0) && (pozycjaY != 0)))
                     {
                         statki[i].UstawienieZyc();
-                        polaPlanszy[x, y] = "S";
-                        for (int k = 0; k < wielkosc; k++)
+                        polaPlanszy[pozycjaX, pozycjaY] = "S";
+                        for (int k = 0; k < rozmiar; k++)
                         {
-                            polaPlanszy[x + k, y] = "S";
+                            polaPlanszy[pozycjaX + k, pozycjaY] = "S";
                         }
-                        warunek = true;
+                        warunekUstawienia = true;
                     }
                     else
                     {
@@ -80,10 +81,10 @@ namespace Statki
 
         public override void Wyswietl()
         {
-            Console.SetCursorPosition(x, y);
+            Console.SetCursorPosition(pozycjaKursoraX, pozycjaKursoraY);
             for (int i = 0; i < PolaX; i++)
             {
-                Console.SetCursorPosition(x, y + i);
+                Console.SetCursorPosition(pozycjaKursoraY, pozycjaKursoraY + i);
                 Console.Write("|");
                 for (int j = 0; j < PolaY; j++)
                 {
@@ -133,12 +134,12 @@ namespace Statki
             Wyswietl();
             Console.SetCursorPosition(10, 14);
             Console.WriteLine("Planasza Gracza");
-            przeciwnik.x = 40;
+            przeciwnik.pozycjaKursoraX = 40;
 
-            Console.SetCursorPosition(przeciwnik.x, przeciwnik.y);
+            Console.SetCursorPosition(przeciwnik.pozycjaKursoraX, przeciwnik.pozycjaKursoraY);
             for (int i = 0; i < przeciwnik.PolaX; i++)
             {
-                Console.SetCursorPosition(przeciwnik.x, przeciwnik.y + i);
+                Console.SetCursorPosition(przeciwnik.pozycjaKursoraX, przeciwnik.pozycjaKursoraY + i);
                 Console.Write("|");
                 for (int j = 0; j < przeciwnik.PolaY; j++)
                 {
@@ -181,7 +182,7 @@ namespace Statki
                 }
                 Console.WriteLine("\n");
             }
-            przeciwnik.x = 2;
+            przeciwnik.pozycjaKursoraX = 2;
             Console.SetCursorPosition(47, 14);
             Console.WriteLine("Plansza przeciwnika");
         }

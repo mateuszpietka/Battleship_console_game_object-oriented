@@ -14,7 +14,7 @@ namespace Statki
         private const int polaX = 11;
         private const int polaY = 11;
         protected string[,] polaPlanszy;
-        protected int x = 2, y = 2;
+        protected int pozycjaKursoraX = 2, pozycjaKursoraY = 2;
 
         public int PolaX { get { return polaX; } }
         public int PolaY { get { return polaY; } }

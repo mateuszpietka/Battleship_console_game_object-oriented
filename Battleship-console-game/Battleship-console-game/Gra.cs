@@ -8,17 +8,10 @@ namespace Statki
 {
     class Gra : Mechanika
     {
-        public PlanszaStatkow gracz1;
-        public List<Statek> statkiGracza1;
-        public PlanszaStatkow gracz2;
-        public List<Statek> statkiGracza2;
-
-        //Jawany kosntrukto bazowy.
-        public Gra() { }
-
-        public void Start()
+                      
+        public void Start(PlanszaStatkow gracz1, List<Statek> statkiGracza1, PlanszaStatkow gracz2, List<Statek> statkiGracza2)
         {
-            int x, y, warunekTrafienia;
+            int ostrzalX, ostrzalY, warunekTrafienia;
             bool warunekWpisania = true;
             Console.Clear();
             Console.SetCursorPosition(2, 0);
@@ -48,12 +41,12 @@ namespace Statki
                     {
                         Console.WriteLine("\nPodaj współrzędne do ostrzału: ");
                         Console.WriteLine("Współrzędna y: ");
-                        Int32.TryParse(Console.ReadLine(), out x);
+                        Int32.TryParse(Console.ReadLine(), out ostrzalX);
                         Console.WriteLine("Współrzędna x: ");
-                        Int32.TryParse(Console.ReadLine(), out y);
-                        if (x > 0 && x < gracz1.PolaX && y > 0 && y < gracz1.PolaY)
+                        Int32.TryParse(Console.ReadLine(), out ostrzalY);
+                        if (ostrzalX > 0 && ostrzalX < gracz1.PolaX && ostrzalY > 0 && ostrzalY < gracz1.PolaY)
                         {
-                            warunekTrafienia = Ostrzal(x, y, ref gracz2, ref statkiGracza2);
+                            warunekTrafienia = Ostrzal(ostrzalX, ostrzalY, ref gracz2, ref statkiGracza2);
                             warunekWpisania = false;
                         }
                     }
@@ -79,12 +72,12 @@ namespace Statki
                     {
                         Console.WriteLine("\nPodaj współrzędne do ostrzału: ");
                         Console.WriteLine("Współrzędna y: ");
-                        Int32.TryParse(Console.ReadLine(), out x);
+                        Int32.TryParse(Console.ReadLine(), out ostrzalX);
                         Console.WriteLine("Współrzędna x: ");
-                        Int32.TryParse(Console.ReadLine(), out y);
-                        if (x > 0 && x < gracz2.PolaX && y > 0 && y < gracz2.PolaY)
+                        Int32.TryParse(Console.ReadLine(), out ostrzalY);
+                        if (ostrzalX > 0 && ostrzalX < gracz2.PolaX && ostrzalY > 0 && ostrzalY < gracz2.PolaY)
                         {
-                            warunekTrafienia = Ostrzal(x, y, ref gracz1, ref statkiGracza1);
+                            warunekTrafienia = Ostrzal(ostrzalX, ostrzalY, ref gracz1, ref statkiGracza1);
                             warunekWpisania = false;
                         }
                     }

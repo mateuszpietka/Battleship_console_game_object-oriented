@@ -10,10 +10,10 @@ namespace Statki
     {
         public override void Wyswietl()
         {
-            Console.SetCursorPosition(x, y);
+            Console.SetCursorPosition(pozycjaKursoraX, pozycjaKursoraY);
             for (int i = 0; i < PolaX; i++)
             {
-                Console.SetCursorPosition(x, y + i);
+                Console.SetCursorPosition(pozycjaKursoraX, pozycjaKursoraY + i);
                 Console.Write("|");
                 for (int j = 0; j < PolaY; j++)
                 {

@@ -67,7 +67,7 @@ namespace Statki
             {
                 for (int j = statki[i].X - 1; j <= statki[i].X + 1; j++)
                 {
-                    for (int k = statki[i].Y - 1; k <= statki[i].Y + statki[i].Wielkosc; k++)
+                    for (int k = statki[i].Y - 1; k <= statki[i].Y + statki[i].Rozmiar; k++)
                     {
                         if (j > 0 && j < plansza.PolaX && k > 0 && k < plansza.PolaY)
                         {
@@ -81,7 +81,7 @@ namespace Statki
             }
             else
             {
-                for (int j = statki[i].X - 1; j <= statki[i].X + statki[i].Wielkosc; j++)
+                for (int j = statki[i].X - 1; j <= statki[i].X + statki[i].Rozmiar; j++)
                 {
                     for (int k = statki[i].Y - 1; k <= statki[i].Y + 1; k++)
                     {

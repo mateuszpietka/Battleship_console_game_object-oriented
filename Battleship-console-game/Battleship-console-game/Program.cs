@@ -39,12 +39,8 @@ namespace Statki
             PlanszaStatkow planszaGracz2 = new PlanszaStatkow();
             planszaGracz2.Wyswietl();
             planszaGracz2.UstawStatki(ref statkiGracza2);
-
-            gra.gracz1 = planszaGracz1;
-            gra.gracz2 = planszaGracz2;
-            gra.statkiGracza1 = statkiGracza1;
-            gra.statkiGracza2 = statkiGracza2;
-            gra.Start();
+          
+            gra.Start(planszaGracz1, statkiGracza1, planszaGracz2, statkiGracza2);
         }
     }
 }

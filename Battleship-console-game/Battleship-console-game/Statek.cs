@@ -13,7 +13,7 @@ namespace Statki
         private int orientacja;
         private int[] zycia;
 
-        public int Wielkosc { get { return rozmiar; } set { if (value > 0) { rozmiar = value; } } }
+        public int Rozmiar { get { return rozmiar; } set { if (value > 0) { rozmiar = value; } } }
         public int X { get { return x; } set { if (value >= 1 && value < 11) { x = value; } } }
         public int Y { get { return y; } set { if (value >= 1 && value < 11) { y = value; } } }
         public int Orientacja { get { return orientacja; } set { if (value == 1 || value == 0) { orientacja = value; } } }
